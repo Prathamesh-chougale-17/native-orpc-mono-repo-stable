@@ -1,0 +1,22 @@
+{
+	"extends": "@repo/config/tsconfig.base.json",
+	"compilerOptions": {
+		"composite": true,
+		"outDir": "dist",
+		"baseUrl": ".",
+		"paths": {
+			"@/*": [
+				"./src/*"
+			]
+		},
+		"jsx": "react-jsx",
+		"jsxImportSource": "hono/jsx",
+		"types": [
+			"node",
+			"bun"
+		],
+		"lib": [
+			"ESNext"
+		]
+	}
+}
