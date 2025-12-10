@@ -1,0 +1,33 @@
+{
+  "name": "@repo/db",
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "default": "./dist/*.js"
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "seed": "bun run src/seeds/index.ts"
+  },
+  "devDependencies": {
+    "@repo/config": "workspace:*",
+    "tsdown": "^0.15.5",
+    "tsx": "^4.20.6"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "dotenv": "catalog:",
+    "mongoose": "^8.14.0",
+    "nanoid": "^5.1.6",
+    "zod": "catalog:"
+  }
+}
